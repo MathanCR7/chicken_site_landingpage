@@ -569,7 +569,8 @@ body.dark-theme{
 
 .popular__card{
   position: relative;
-  padding-block: 6rem 3rem;
+  /* UPDATED: Increased top padding from 6rem to 8.5rem to prevent image covering title on mobile */
+  padding-block: 8.5rem 3rem;
   text-align: center;
   transition: transform .4s;
   margin-top: 2rem; /* Spacing for the image popping out */
