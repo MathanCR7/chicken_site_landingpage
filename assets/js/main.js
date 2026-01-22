@@ -29,20 +29,15 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== SHADOW HEADER ===============*/
+/*=============== SHADOW HEADER (FIXED) ===============*/
 const shadowHeader = () =>{
     const header = document.getElementById('header')
     
-    // Check if we are on Desktop (>= 1150px)
-    if (window.innerWidth >= 1150) {
-        // Desktop: Change background on scroll
-        window.scrollY >= 50 ? header.classList.add('shadow-header') 
-                             : header.classList.remove('shadow-header')
-    } else {
-        // Mobile: Do NOT change background automatically on scroll
-        // It should remain static (transparent) unless handled by the menu click
-        header.classList.remove('shadow-header')
-    }
+    // FIX: Removed the desktop-only check (if window.innerWidth >= 1150)
+    // Now the header background will show on mobile when scrolling too,
+    // ensuring buttons are visible.
+    window.scrollY >= 50 ? header.classList.add('shadow-header') 
+                         : header.classList.remove('shadow-header')
 }
 window.addEventListener('scroll', shadowHeader)
 

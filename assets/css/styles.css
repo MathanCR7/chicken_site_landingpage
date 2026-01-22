@@ -326,7 +326,8 @@ body.dark-theme{
   bottom: 2.5rem;
 }
 
-.show-menu {
+/* FIX: Specificity increased to override media query on mobile */
+.nav__menu.show-menu {
   top: 0;
 }
 
